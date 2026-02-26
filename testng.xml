@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2" >
+  <test  name="Chrometests">
+	  <parameter name="browser" value="Chrome" />
+    <classes>  
+      <class name="VGApplication.VG_UP.Stage_2"/>
+    </classes>
+  </test>
+  <test name="Firefoxtests">
+	  <parameter name="browser" value="Firefox" />
+    <classes>
+      <class name="VGApplication.VG_UP.Stage_2"/>
+    </classes>
+  </test>
+  <test name="Edgetests">
+	  <parameter name="browser" value="Edge" />
+    <classes>
+      <class name="VGApplication.VG_UP.Stage_2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
