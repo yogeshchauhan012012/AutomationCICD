@@ -12,7 +12,7 @@ import org.testng.ITestContext;
 
 import org.testng.annotations.DataProvider;
 
-public class studetdetails2 {
+public class Studetdetails2 {
 	
     @DataProvider(name="step2",parallel = true )
     public Object[][] datadetails(ITestContext context) throws IOException

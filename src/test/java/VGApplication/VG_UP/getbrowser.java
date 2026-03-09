@@ -20,23 +20,23 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class getbrowser {
+public class Getbrowser {
 
   public  WebDriver driver;
     public WebDriver getweb() {
         
 		String browsername="Chrome";
-			if(browsername.equalsIgnoreCase("Chrome"))
+			if(browsername.contains("Chrome"))
 			{
 					WebDriverManager.chromedriver().setup();
 					driver= new ChromeDriver();
 				}
-		else if(browsername.equalsIgnoreCase("Firefox"))
+		else if(browsername.contains("Firefox"))
 			{ 
 				WebDriverManager.firefoxdriver().setup();
 				driver= new FirefoxDriver();
 			}
-			else if (browsername.equalsIgnoreCase("Edge")) {
+			else if (browsername.contains("Edge")) {
 				WebDriverManager.edgedriver().setup();
 				driver= new EdgeDriver();
 			}

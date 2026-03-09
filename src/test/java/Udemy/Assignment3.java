@@ -7,16 +7,43 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Assignment3 {
 
+	WebDriver driver;
 	@Test
-	public void section9() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void section9() {
+		
+		String browsername=System.getProperty("broswer")!=null ? System.getProperty("broswer"):"Chrome";
+		
+	//	String browsername="Chrome";
+		if(browsername.equalsIgnoreCase("Chrome"))
+		{
+				WebDriverManager.chromedriver().setup();
+				driver= new ChromeDriver();
+			}
+	else if(browsername.equalsIgnoreCase("Firefox"))
+		{ 
+			WebDriverManager.firefoxdriver().setup();
+			driver= new FirefoxDriver();
+		}
+		else if (browsername.equalsIgnoreCase("Edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver= new EdgeDriver();
+		}
+		else{
+       System.out.println("Selected Broswer is not configure/install in your System. Please change the configure/install the broswer in your System"+"\n"+"Brosername:"+browsername);
+}
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/");

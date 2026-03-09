@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
-public class studetdetails {
+public class Studetdetails {
 	
     @DataProvider(name="step1")
     public Object[][] datadetails() throws IOException

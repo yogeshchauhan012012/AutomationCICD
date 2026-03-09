@@ -1,23 +1,17 @@
 package VGApplication.VG_UP;
 
 import java.awt.AWTException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.devtools.DevTools;
+
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import Datadetails.studetdetails;
-import dataprovider.getdataprovider;
+import Datadetails.Studetdetails;
 
 
 
-public class Stage_01 extends getbrowser {
 
-	@Test(dataProvider = "step1",dataProviderClass = studetdetails.class)
+public class Stage_01 extends Getbrowser {
+
+	@Test(dataProvider = "step1",dataProviderClass = Studetdetails.class)
 	public void registrationfirst(String Acedemicyear,String Addmisiontestealier,String Schoolruralarea,String Aadharnumber,String Schoolname, String Genders,String DOB,String Mobilenumber,String Familyincome,
 	String Mothername,String Motherqualification,String Motherincome,String Motheroccupion,String Fathername,String Fatherqualification,String Fatherincome,String Fatheroccupion,String Guardianaadhaar,String GFatherincome,String Grandfathername,String WhatsappNumber,
 			String Village,String State,String District,String Tehsil,String Block,String postoffice ,String Pincode,String currentschoolname,String SchlUDISE,String Schtype,String Classadmitted,String Schladdress,String studphoto,String aadharphoto,String certificatephoto) throws InterruptedException, AWTException
