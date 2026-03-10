@@ -70,5 +70,7 @@ public class Assignment3 {
 		driver.findElement(By.cssSelector(".nav-item.active")).click();
 		
 		
+		System.out.println("Test is successfully completed")
+		
 	}
 }
