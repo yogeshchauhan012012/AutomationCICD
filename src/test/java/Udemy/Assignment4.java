@@ -49,4 +49,6 @@ public class Assignment4 {
 	
 	Thread.sleep(2000);
 	System.out.println(driver.findElement(By.cssSelector("div[class*='alert-success ']")).getText());
-}}
+}
+
+}
