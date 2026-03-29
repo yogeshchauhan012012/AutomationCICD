@@ -31,7 +31,7 @@ public class Assignment4 {
 		
 		
 	}
-	@Test
+	//@Test
 	public void section7() throws InterruptedException {
 	WebDriver driver = new ChromeDriver();
 	driver.get("https://rahulshettyacademy.com/angularpractice/");
@@ -49,6 +49,4 @@ public class Assignment4 {
 	
 	Thread.sleep(2000);
 	System.out.println(driver.findElement(By.cssSelector("div[class*='alert-success ']")).getText());
-}
-
-}
+}}
